@@ -57,7 +57,7 @@ class tags{
                 $i=0;
                 //$split=;
                 foreach(explode(',',htmlspecialchars($_POST['tags'])) as $tag){
-                    $tags->tags[$i]=trim($tag);
+                    $tags->tags[$i]=preg_replace('/\s/', '-', trim($tag));
                     $i++;
                 }
 
