@@ -13,16 +13,13 @@
 <input name='submit' type='submit' value='Save'>
 <input name='submit' type='submit' value='Save and edit'>
 <input name='submit' type='submit' value='Preview'>
+<input id='save' name='save' type='submit' onClick="download()" value='Download'>
 <input name='submit' type='submit' value='Cancel'>
 <?php echo '<input name=\'submit\' type=\'submit\' value=\'Delete\' onclick="return confirm(\'[Warning]\nDelete the page. Are you sure?\')">';?>
 <input type='hidden' name='id' value='<?php echo $document->page_content['id'];?>'>
 <input type='hidden' id='title' name='title' value='<?php echo ($document->page_content['title']='new_entry' ? $GLOBALS['page'] : $document->page_content['title']);?>'>
 <input type='hidden' name='list' value='<?php echo $document->page_content['list'];?>'>
 </form>
-<br>
-<button id='save' onClick="download()">Save to File</button>
-<br>
-<br>
 <a id="markdown-help" href="javascript:toggle('markdown-help-content','markdown-help','Show - Markdown Manual','Hide - Markdown Manual');"><span style="font-size: 80%;">Show - Markdown Manual</span></a>
 </article>
 
